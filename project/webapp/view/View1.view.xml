@@ -1,0 +1,62 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page">
+        <!-- <headerContent> -->
+            <Toolbar>
+                <Image src="/img/logo.jpg" alt="Logo" width="40px" height="40px" />            
+                <Text text="amazon" class="sapUiSmallMarginEnd" />
+                <ToolbarSpacer/>
+                <Button text="Login" press="onClickloginpage" visible="{= !${rawData>/isLoggedIn} }" />
+                <Text id="loggedaInUser" text="{rawData>/CurrentUser/username}" visible="{rawData>/isLoggedIn}" />
+                <Button text="Logout" press="onClicklogoutpage" visible="{rawData>/isLoggedIn}" />
+                <Button text="Cart" icon="sap-icon://cart" press="onClickCart" visible="{rawData>/isLoggedIn}" />
+                <Button id="myOrdersBtn" text="My Orders" press="onClickMyOrders" visible="{rawData>/isLoggedIn}" />
+            </Toolbar>  
+        <!-- </headerContent> -->
+        <content>
+            
+            <Carousel id="imageCarousel" height="300px"  width="100%" showPageIndicator="true" loop="true" >              
+                <Image src="/img/p1c.jpg" alt="Image 1" width="100%" height="100%"  />
+                <Image src="/img/p2c.jpg" alt="Image 2" width="100%" height="100%" />
+                <Image src="/img/p3c.jpg" alt="Image 3" width="100%" height="100%" />
+                <Image src="/img/p4c.jpg" alt="Image 4" width="100%" height="100%" />
+            </Carousel>
+            <HBox justifyContent="SpaceAround" direction="Row">
+                <VBox  justifyContent="Center" alignItems="Center" class="vboxWithBorder">
+                    <Button text="Women Wear" id="btWomen" press="onClick" /> 
+                    <HBox class="sapUiSmallMarginTop" >
+                        <Image src="/img/kw/wk1.jpg" width="160px" height="200px" class="imageWithMarginRight" />
+                        <Image src="/img/kw/wk2.jpg" width="160px" height="200px"/>
+                    </HBox>
+                    <HBox class="sapUiSmallMarginTop" >
+                        <Image src="/img/kw/wk3.jpg" width="160px" height="200px" class="imageWithMarginRight" />
+                        <Image src="/img/kw/wk4.jpg" width="160px" height="200px"/>
+                    </HBox>
+                </VBox>
+                <VBox justifyContent="Center" alignItems="Center" class="vboxWithBorder">
+                    <Button text="Men Wear" id="btMen" press="onClick" /> 
+                    <HBox class="sapUiSmallMarginTop">
+                        <Image src="/img/ms/ms1.jpg" width="160px" height="200px" class="imageWithMarginRight"/>
+                        <Image src="/img/ms/ms2.jpg" width="160px" height="200px"/>
+                    </HBox>
+                    <HBox class="sapUiSmallMarginTop" >
+                        <Image src="/img/ms/ms3.jpg" width="160px" height="200px" class="imageWithMarginRight" />
+                        <Image src="/img/ms/ms4.jpg" width="160px" height="200px"/>
+                    </HBox>
+                </VBox>
+                <VBox justifyContent="Center" alignItems="Center" class="vboxWithBorder">
+                    <Button text="Kids Wear" id="btKid" press="onClick" /> 
+                    <HBox class="sapUiSmallMarginTop">
+                        <Image src="/img/kbg/kg1.jpg" width="160px" height="200px" class="imageWithMarginRight"/>
+                        <Image src="/img/kbg/kg2.jpg" width="160px" height="200px"/>
+                    </HBox>
+                    <HBox class="sapUiSmallMarginTop" >
+                        <Image src="/img/kbg/kb1.jpg" width="160px" height="200px" class="imageWithMarginRight" />
+                        <Image src="/img/kbg/kb2.jpg" width="160px" height="200px"/>
+                    </HBox>
+                </VBox>
+            </HBox>
+        </content>
+    </Page>
+</mvc:View>

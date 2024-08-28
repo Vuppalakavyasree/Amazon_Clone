@@ -1,0 +1,48 @@
+<mvc:View controllerName="project1.controller.loginpage"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m">
+    <!-- <Shell id="shell" > -->
+        <App id="app">
+            <pages>
+                <Page id="page" title = "Login">
+                    <content>
+                        <form:SimpleForm editable="true" layout = "ResponsiveGridLayout"  adjustLabelSpan = "false" labelSpanL = "4"
+                         labelSpanM = "4" labelSpanS = "4" columnsL="1" columnsM="1" emptySpanL="4" emptySpanM="4" id="loginForm" visible="true">
+                            <form:content>
+                                <Label text="User Name" required="true"  ></Label>
+                                <Input id= "inp_usernameId"></Input>
+                                <Label text="Password" required="true" ></Label>
+                                <Input id= "inp_passwordId" type= "Password" ></Input>
+                               
+                            </form:content>
+                        </form:SimpleForm>
+                        <form:SimpleForm editable="true" layout="ResponsiveGridLayout" adjustLabelSpan="false" labelSpanL="4"
+                            labelSpanM="4" labelSpanS="4" columnsL="1" columnsM="1" emptySpanL="4" emptySpanM="4" id="signUpForm" visible="false">
+                            <form:content>
+                                <Label text="New User Name" required="true"></Label>
+                                <Input id="signUp_usernameId"></Input>
+                                <Label text="New Password" required="true"></Label>
+                                <Input id="signUp_passwordId" type="Password"></Input>
+                                <Label text="Confirm Password" required="true"></Label>
+                                <Input id="signUp_confirmPasswordId" type="Password"></Input>
+                            </form:content>
+                        </form:SimpleForm>
+                    </content>
+                    <footer>
+                        <Bar design="Footer">
+                            <contentRight>
+                                <Button text="Login" type="Accept" press="onLoginUser" id="loginButton" visible="true"/>
+                                <Button text="Sign Up" type="Accept" press="onSignUpUser" id="signUpButton" visible="false" />
+                                <Button text="Switch to Sign Up" press="onSwitchToSignUp" id="switchToSignUpButton" visible="true"/>
+                                <Button text="Switch to Login" press="onSwitchToLogin" id="switchToLoginButton" visible="false" />
+                                <Button text="To Home" press="onSwitchTohome"  visible="true" />
+                            </contentRight>
+                        </Bar>
+                    </footer>
+                </Page>
+            </pages>
+        </App>
+    <!-- </Shell> -->
+</mvc:View>

@@ -1,0 +1,37 @@
+<mvc:View controllerName="project1.controller.women"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" >
+        <Toolbar>
+                <Image src="/img/logo.jpg" alt="Logo" width="40px" height="40px" />            
+                <Text text="amazon" class="sapUiSmallMarginEnd" />
+                <ToolbarSpacer/>
+                <Button text="Login" press="onClickloginpage" visible="{= !${rawData>/isLoggedIn} }" />
+                <Text id="loggedaInUser" text="{rawData>/CurrentUser/username}" visible="{rawData>/isLoggedIn}" />
+                <Button text="Logout" press="onClicklogoutpage" visible="{rawData>/isLoggedIn}" />
+                <Button text="Cart" icon="sap-icon://cart" press="onClickCart" visible="{rawData>/isLoggedIn}" />
+                <Button id="myOrdersBtn" text="My Orders" press="onClickMyOrders" visible="{rawData>/isLoggedIn}" />
+                <Button text="Home" press="onClickHome" />
+        </Toolbar>
+        <content>    
+            <VBox items="{rawData>/SelectedData}">
+                <HBox class="sapUiSmallMargin" justifyContent="SpaceAround">
+                    <VBox justifyContent="Center" class="sapUiSmallMarginBottom">
+                        <Image src="{rawData>image}" width="240px" height="300px"/>
+                    </VBox>
+                    <VBox justifyContent="Center" class="sapUiSmallMarginBottom">
+                        <VBox>
+                            <Text text="{rawData>name}"/>
+                            <Text text="Cost: {rawData>cost}"/>
+                            <Text text="Seller: {rawData>seller}"/>
+                        </VBox>
+                    </VBox>
+                    <VBox justifyContent="Center">
+                        <Button text="Add to Cart" press="onAddToCart" />
+                        <Button text="Buy" press="onBuyDress" />
+                    </VBox>
+                </HBox> 
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,107 @@
+{
+    "Employees":[
+        {
+            "Name" : "Kavya",
+            "city" : "Pune"
+        },
+        {
+            "Name" : "Bhavya",
+            "city" : "HNR"
+        },
+        {
+            "Name" : "Srilatha",
+            "city" : "Suryapet"
+        },
+        {
+            "Name" : "Ramakrishna",
+            "city" : "HYD"
+        }
+    ],
+    "UserDetail":{},
+    "Users":[],
+    "CurrentUser" :[],
+    "isLoggedIn": false ,
+    "DressesMen": [
+        {
+          "image": "/img/ms/ms1.jpg",
+          "name": "Dress 1",
+          "cost": "$100",
+          "seller": "Seller 1"
+        },
+        {
+          "image": "/img/ms/ms2.jpg",
+          "name": "Dress 2",
+          "cost": "$120",
+          "seller": "Seller 2"
+        },
+        {
+          "image": "/img/ms/ms3.jpg",
+          "name": "Dress 3",
+          "cost": "$150",
+          "seller": "Seller 3"
+        },
+        {
+          "image": "/img/ms/ms4.jpg",
+          "name": "Dress 4",
+          "cost": "$180",
+          "seller": "Seller 4"
+        }
+      ],
+    "DressesWomen": [
+      {
+        "image": "/img/kw/wk1.jpg",
+        "name": "Dress 1",
+        "cost": "$100",
+        "seller": "Seller 1"
+      },
+      {
+        "image": "/img/kw/wk2.jpg",
+        "name": "Dress 2",
+        "cost": "$120",
+        "seller": "Seller 2"
+      },
+      {
+        "image": "/img/kw/wk3.jpg",
+        "name": "Dress 3",
+        "cost": "$150",
+        "seller": "Seller 3"
+      },
+      {
+        "image": "/img/kw/wk4.jpg",
+        "name": "Dress 4",
+        "cost": "$180",
+        "seller": "Seller 4"
+      }
+    ],
+    "DressesKids": [
+      {
+        "image": "/img/kbg/kb1.jpg",
+        "name": "Dress 1",
+        "cost": "$100",
+        "seller": "Seller 1"
+      },
+      {
+        "image": "/img/kbg/kg1.jpg",
+        "name": "Dress 2",
+        "cost": "$120",
+        "seller": "Seller 2"
+      },
+      {
+        "image": "/img/kbg/kb2.jpg",
+        "name": "Dress 3",
+        "cost": "$150",
+        "seller": "Seller 3"
+      },
+      {
+        "image": "/img/kbg/kg2.jpg",
+        "name": "Dress 4",
+        "cost": "$180",
+        "seller": "Seller 4"
+      }
+    ],
+    "currentorder": {
+      "address": "", 
+      "items": []    
+  }
+
+}
